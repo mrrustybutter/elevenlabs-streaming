@@ -2,7 +2,7 @@
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
-import { ElevenLabsStreamingClient } from 'elevenlabs-streaming-client';
+import { ElevenLabsStreamingClient } from '@elevenlabs-streaming/client';
 
 // Configuration from environment variables
 const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
