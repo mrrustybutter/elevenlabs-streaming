@@ -1,0 +1,28 @@
+{
+  "name": "elevenlabs-streaming-client",
+  "version": "1.1.0",
+  "description": "ElevenLabs streaming client with buffered audio playback",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "test": "tsx src/test.ts"
+  },
+  "keywords": [
+    "elevenlabs",
+    "tts",
+    "streaming",
+    "audio"
+  ],
+  "author": "Rusty Butter",
+  "license": "MIT",
+  "dependencies": {
+    "elevenlabs": "^1.59.0"
+  },
+  "devDependencies": {
+    "@rusty-butter/tsconfig": "workspace:*",
+    "@types/node": "^24.1.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
