@@ -8,9 +8,11 @@ A mono-repo for ElevenLabs streaming audio functionality, containing:
 ## Packages
 
 ### Client (`packages/client`)
+
 WebSocket client that connects to ElevenLabs for real-time text-to-speech streaming.
 
 ### MCP Server (`packages/mcp-server`)
+
 MCP server that provides LLM-friendly interface for controlling ElevenLabs streaming.
 
 ## Development

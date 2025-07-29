@@ -14,8 +14,8 @@
     "typecheck": "npm run typecheck --workspaces"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "typescript": "^5.0.0"
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3"
   },
   "engines": {
     "node": ">=18.0.0"

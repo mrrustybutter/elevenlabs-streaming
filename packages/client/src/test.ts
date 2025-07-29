@@ -8,7 +8,7 @@ async function test() {
     process.exit(1);
   }
 
-  console.log('Creating ElevenLabs client...');
+  console.warn('Creating ElevenLabs client...');
   const client = new ElevenLabsStreamingClient({
     apiKey,
     voiceSettings: {
@@ -19,18 +19,18 @@ async function test() {
   });
 
   try {
-    console.log('Testing audio generation with buffering...');
+    console.warn('Testing audio generation with buffering...');
     const audioBuffer = await client.generateAudio({
       text: 'YO YO YO! Testing the new buffered audio system! This is Rusty Butter making sure our audio streaming is SMOOTH as butter! No more glitches, just pure CHAOS!',
       playAudio: true,
     });
 
-    console.log(`Success! Generated ${audioBuffer.length} bytes of audio`);
+    console.warn(`Success! Generated ${audioBuffer.length} bytes of audio`);
 
-    console.log('\nListing available voices...');
+    console.warn('\nListing available voices...');
     const voices = await client.listVoices();
-    console.log(`Found ${voices.length} voices`);
-    console.log('First 5 voices:', voices.slice(0, 5));
+    console.warn(`Found ${voices.length} voices`);
+    console.warn('First 5 voices:', voices.slice(0, 5));
   } catch (error) {
     console.error('Test failed:', error);
     process.exit(1);

@@ -19,8 +19,5 @@
       "@elevenlabs-streaming/*": ["packages/*/src"]
     }
   },
-  "references": [
-    { "path": "./packages/client" },
-    { "path": "./packages/mcp-server" }
-  ]
+  "references": [{ "path": "./packages/client" }, { "path": "./packages/mcp-server" }]
 }
