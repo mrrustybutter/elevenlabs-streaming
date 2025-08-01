@@ -128,9 +128,14 @@ class ElevenLabsStreamingMCPServer {
     } = params;
 
     try {
+      // Check text length and warn if it's very long
+      if (text.length > 5000) {
+        console.error(`[ElevenLabs MCP] WARNING: Text is ${text.length} characters long. This may take a while...`);
+      }
+
       console.error(`[ElevenLabs MCP] Generating audio for: "${text.substring(0, 50)}..."`);
 
-      // Use the client to generate audio
+      // Use the client to generate audio with streaming
       const audioBuffer = await this.client.generateAudio({
         text,
         voiceId: voice_id,
@@ -143,7 +148,7 @@ class ElevenLabsStreamingMCPServer {
         content: [
           {
             type: 'text',
-            text: `Audio generated and ${play_audio ? 'played' : 'buffered'} successfully! (${audioBuffer.length} bytes)`,
+            text: `Audio generated and ${play_audio ? 'streamed' : 'buffered'} successfully! (${audioBuffer.length} bytes)`,
           },
         ],
       };
